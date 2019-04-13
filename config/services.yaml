@@ -23,3 +23,17 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Model\Event\Command\Handler\:
+        resource: '../src/Model/Event/Command/Handler'
+        tags: [messenger.message_handler]
+
+    App\Model\Event\Query\Handler\:
+        resource: '../src/Model/Event/Query/Handler'
+        tags: [messenger.message_handler]
+
+    App\Repository\:
+        resource: '../src/Repository'
+
+    App\Model\Event\EventRepositoryInterface:
+        alias: App\Repository\EventRepository

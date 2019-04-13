@@ -1,0 +1,5 @@
+events:
+    type: rest
+    resource: App\Controller\Admin\EventController
+    name_prefix: app.
+    prefix: /admin/api

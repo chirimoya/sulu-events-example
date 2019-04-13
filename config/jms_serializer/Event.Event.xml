@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serializer>
+    <class name="App\Model\Event\Event" exclusion-policy="ALL">
+        <virtual-property method="getId" serialized-name="id" expose="true"/>
+        <virtual-property method="getTitle" serialized-name="title" expose="true"/>
+        <virtual-property method="getDescription" serialized-name="description" expose="true"/>
+        <virtual-property method="getDate" serialized-name="date" expose="true">
+            <type><![CDATA[DateTime<'Y-m-d'>]]></type>
+        </virtual-property>
+    </class>
+</serializer>

@@ -1,0 +1,12 @@
+framework:
+    messenger:
+        buses:
+            command_bus:
+                middleware:
+                    - doctrine_transaction
+
+services:
+    messenger.middleware.doctrine_transaction:
+        class: Symfony\Bridge\Doctrine\Messenger\DoctrineTransactionMiddleware
+        abstract: true
+        arguments: ['@doctrine']
