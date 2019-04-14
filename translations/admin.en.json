@@ -1,0 +1,13 @@
+{
+    "app.id": "ID",
+    "app.details": "Details",
+    "app.events": "Events",
+    "app.title": "Title",
+    "app.description": "Description",
+    "app.date": "Date",
+    "app.created": "Created at",
+    "app.creator": "Created by",
+    "app.changed": "Changed at",
+    "app.changer": "Changed by",
+    "app.main_navigation_events": "Events"
+}

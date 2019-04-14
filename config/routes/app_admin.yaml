@@ -3,3 +3,5 @@ events:
     resource: App\Controller\Admin\EventController
     name_prefix: app.
     prefix: /admin/api
+    options:
+        expose: true

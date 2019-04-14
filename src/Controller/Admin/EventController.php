@@ -7,6 +7,7 @@ namespace App\Controller\Admin;
 use App\Entity\Event;
 use Doctrine\ORM\EntityManagerInterface;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
+use FOS\RestBundle\Controller\Annotations as Rest;
 use Sulu\Component\Rest\ListBuilder\Doctrine\DoctrineListBuilder;
 use Sulu\Component\Rest\ListBuilder\Doctrine\DoctrineListBuilderFactoryInterface;
 use Sulu\Component\Rest\ListBuilder\ListRepresentation;
@@ -76,6 +77,9 @@ class EventController extends AbstractFOSRestController
         );
     }
 
+    /**
+     * @Rest\Get("/events/{id}")
+     */
     public function getEventAction(Event $event): Response
     {
         return $this->handleView(
@@ -121,6 +125,9 @@ class EventController extends AbstractFOSRestController
         );
     }
 
+    /**
+     * @Rest\Delete("/events/{id}")
+     */
     public function deleteEventAction(Event $event): Response
     {
         $this->entityManager->remove($event);
