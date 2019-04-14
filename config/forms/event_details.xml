@@ -1,0 +1,26 @@
+<form xmlns="http://schemas.sulu.io/template/template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/form-1.0.xsd">
+
+    <key>event_details</key>
+
+    <properties>
+        <property name="title" type="text_line" mandatory="true" colspan="8">
+            <meta>
+                <title>app.title</title>
+            </meta>
+        </property>
+
+        <property name="date" type="date" colspan="4">
+            <meta>
+                <title>app.date</title>
+            </meta>
+        </property>
+
+        <property name="description" type="text_editor">
+            <meta>
+                <title>app.description</title>
+            </meta>
+        </property>
+    </properties>
+</form>
