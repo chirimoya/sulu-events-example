@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02363021b2e6317110814a435af5c0c1",
+    "content-hash": "6ad7f1ee95e2d71eb6078e6c50da9af4",
     "packages": [
         {
             "name": "aferrandini/urlizer",
@@ -867,6 +867,71 @@
             "time": "2017-10-30T19:26:42+00:00"
         },
         {
+            "name": "doctrine/doctrine-migrations-bundle",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/DoctrineMigrationsBundle.git",
+                "reference": "4c9579e0e43df1fb3f0ca29b9c20871c824fac71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/DoctrineMigrationsBundle/zipball/4c9579e0e43df1fb3f0ca29b9c20871c824fac71",
+                "reference": "4c9579e0e43df1fb3f0ca29b9c20871c824fac71",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/doctrine-bundle": "~1.0",
+                "doctrine/migrations": "^2.0",
+                "php": "^7.1",
+                "symfony/framework-bundle": "~3.4|~4.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^5.0",
+                "mikey179/vfsstream": "^1.6",
+                "phpstan/phpstan": "^0.9.2",
+                "phpstan/phpstan-strict-rules": "^0.9",
+                "phpunit/phpunit": "^5.7|^6.4|^7.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Bundle\\MigrationsBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Doctrine Project",
+                    "homepage": "http://www.doctrine-project.org"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony DoctrineMigrationsBundle",
+            "homepage": "https://www.doctrine-project.org",
+            "keywords": [
+                "dbal",
+                "migrations",
+                "schema"
+            ],
+            "time": "2019-01-09T18:49:50+00:00"
+        },
+        {
             "name": "doctrine/event-manager",
             "version": "v1.0.0",
             "source": {
@@ -1116,6 +1181,88 @@
                 "parser"
             ],
             "time": "2014-09-09T13:34:57+00:00"
+        },
+        {
+            "name": "doctrine/migrations",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/migrations.git",
+                "reference": "0101f5bd7f4e5043bf8630db2930f8fd7da552b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/migrations/zipball/0101f5bd7f4e5043bf8630db2930f8fd7da552b6",
+                "reference": "0101f5bd7f4e5043bf8630db2930f8fd7da552b6",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^2.6",
+                "ocramius/package-versions": "^1.3",
+                "ocramius/proxy-manager": "^2.0.2",
+                "php": "^7.1",
+                "symfony/console": "^3.4||^4.0",
+                "symfony/stopwatch": "^3.4||^4.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^5.0",
+                "doctrine/orm": "^2.6",
+                "ext-pdo_sqlite": "*",
+                "jdorn/sql-formatter": "^1.1",
+                "mikey179/vfsstream": "^1.6",
+                "phpstan/phpstan": "^0.10",
+                "phpstan/phpstan-deprecation-rules": "^0.10",
+                "phpstan/phpstan-phpunit": "^0.10",
+                "phpstan/phpstan-strict-rules": "^0.10",
+                "phpunit/phpunit": "^7.0",
+                "symfony/process": "^3.4||^4.0",
+                "symfony/yaml": "^3.4||^4.0"
+            },
+            "suggest": {
+                "jdorn/sql-formatter": "Allows to generate formatted SQL with the diff command.",
+                "symfony/yaml": "Allows the use of yaml for migration configuration files."
+            },
+            "bin": [
+                "bin/doctrine-migrations"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Migrations\\": "lib/Doctrine/Migrations"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Michael Simonson",
+                    "email": "contact@mikesimonson.com"
+                }
+            ],
+            "description": "PHP Doctrine Migrations project offer additional functionality on top of the database abstraction layer (DBAL) for versioning your database schema and easily deploying changes to it. It is a very easy to use and a powerful tool.",
+            "homepage": "https://www.doctrine-project.org/projects/migrations.html",
+            "keywords": [
+                "database",
+                "dbal",
+                "migrations",
+                "php"
+            ],
+            "time": "2019-01-03T18:59:09+00:00"
         },
         {
             "name": "doctrine/orm",
@@ -6937,6 +7084,34 @@
             "time": "2019-02-23T15:17:42+00:00"
         },
         {
+            "name": "symfony/orm-pack",
+            "version": "v1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/orm-pack.git",
+                "reference": "36c2a928482dc5f05c5c1c1b947242ae03ff1335"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/orm-pack/zipball/36c2a928482dc5f05c5c1c1b947242ae03ff1335",
+                "reference": "36c2a928482dc5f05c5c1c1b947242ae03ff1335",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/doctrine-bundle": "^1.6.10",
+                "doctrine/doctrine-migrations-bundle": "^1.3|^2.0",
+                "doctrine/orm": "^2.5.11",
+                "php": "^7.0"
+            },
+            "type": "symfony-pack",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A pack for the Doctrine ORM",
+            "time": "2019-01-16T09:49:15+00:00"
+        },
+        {
             "name": "symfony/polyfill-intl-icu",
             "version": "v1.11.0",
             "source": {
@@ -7617,6 +7792,56 @@
             "description": "Symfony Serializer Component",
             "homepage": "https://symfony.com",
             "time": "2019-04-01T16:12:17+00:00"
+        },
+        {
+            "name": "symfony/stopwatch",
+            "version": "v4.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/stopwatch.git",
+                "reference": "b1a5f646d56a3290230dbc8edf2a0d62cda23f67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/b1a5f646d56a3290230dbc8edf2a0d62cda23f67",
+                "reference": "b1a5f646d56a3290230dbc8edf2a0d62cda23f67",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/contracts": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Stopwatch\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Stopwatch Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-01-16T20:31:39+00:00"
         },
         {
             "name": "symfony/swiftmailer-bundle",
@@ -8941,6 +9166,57 @@
             "time": "2016-08-23T14:48:07+00:00"
         },
         {
+            "name": "nikic/php-parser",
+            "version": "v4.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser.git",
+                "reference": "5221f49a608808c1e4d436df32884cbc1b821ac0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/5221f49a608808c1e4d436df32884cbc1b821ac0",
+                "reference": "5221f49a608808c1e4d436df32884cbc1b821ac0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5 || ^7.0"
+            },
+            "bin": [
+                "bin/php-parse"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhpParser\\": "lib/PhpParser"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov"
+                }
+            ],
+            "description": "A PHP parser written in PHP",
+            "keywords": [
+                "parser",
+                "php"
+            ],
+            "time": "2019-02-16T20:54:15+00:00"
+        },
+        {
             "name": "phpcr/phpcr-shell",
             "version": "1.1.1",
             "source": {
@@ -9075,6 +9351,72 @@
             "description": "Symfony DebugBundle",
             "homepage": "https://symfony.com",
             "time": "2019-03-04T10:37:56+00:00"
+        },
+        {
+            "name": "symfony/maker-bundle",
+            "version": "v1.11.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/maker-bundle.git",
+                "reference": "186ffc80b8f363e04ea3c2ebf49e1263a84b4e39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/186ffc80b8f363e04ea3c2ebf49e1263a84b4e39",
+                "reference": "186ffc80b8f363e04ea3c2ebf49e1263a84b4e39",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/inflector": "^1.2",
+                "nikic/php-parser": "^4.0",
+                "php": "^7.0.8",
+                "symfony/config": "^3.4|^4.0",
+                "symfony/console": "^3.4|^4.0",
+                "symfony/dependency-injection": "^3.4|^4.0",
+                "symfony/filesystem": "^3.4|^4.0",
+                "symfony/finder": "^3.4|^4.0",
+                "symfony/framework-bundle": "^3.4|^4.0",
+                "symfony/http-kernel": "^3.4|^4.0"
+            },
+            "require-dev": {
+                "allocine/twigcs": "^3.0",
+                "doctrine/doctrine-bundle": "^1.8",
+                "doctrine/orm": "^2.3",
+                "friendsofphp/php-cs-fixer": "^2.8",
+                "symfony/phpunit-bridge": "^3.4|^4.0",
+                "symfony/process": "^3.4|^4.0",
+                "symfony/yaml": "^3.4|^4.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bundle\\MakerBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Maker helps you create empty commands, controllers, form classes, tests and more so you can forget about writing boilerplate code.",
+            "homepage": "https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html",
+            "keywords": [
+                "code generator",
+                "generator",
+                "scaffold",
+                "scaffolding"
+            ],
+            "time": "2019-03-11T15:55:09+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",
